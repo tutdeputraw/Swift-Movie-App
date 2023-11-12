@@ -12,6 +12,7 @@ extension SearchMovieViewModel {
     func updateSearchKeyword() {
         if getSearchedKeyword() == "" {
             appState.value = .none
+            timer?.invalidate()
             return
         }
         
