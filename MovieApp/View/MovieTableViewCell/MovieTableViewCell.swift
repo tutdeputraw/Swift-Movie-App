@@ -26,9 +26,9 @@ class MovieTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//    }
     
     func bindData(_ movie: Movie) {
         titleLabel.text = movie.title

@@ -9,7 +9,7 @@ import Foundation
 
 extension TrendingMovieViewModel {
     func getTrendingMovie(page: Int = 1) {
-        appState.value = .OnLoading
+//        appState.value = .OnLoading
         
         APICaller.getTrendingMovies(page: page) { result in
             switch result {

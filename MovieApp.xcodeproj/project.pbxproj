@@ -37,6 +37,9 @@
 		D6C905B22B0103D200EA54EB /* TrendingMovieViewModel+Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C905B12B0103D200EA54EB /* TrendingMovieViewModel+Pagination.swift */; };
 		D6C905B42B01072000EA54EB /* TrendingMovieViewController+LoadNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C905B32B01072000EA54EB /* TrendingMovieViewController+LoadNext.swift */; };
 		D6C905B62B01077B00EA54EB /* SearchMovieViewController+LoadNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C905B52B01077B00EA54EB /* SearchMovieViewController+LoadNext.swift */; };
+		D6C905BC2B010CE300EA54EB /* TrendingMovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C905BA2B010CE300EA54EB /* TrendingMovieDetailViewController.swift */; };
+		D6C905BD2B010CE300EA54EB /* TrendingMovieDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C905BB2B010CE300EA54EB /* TrendingMovieDetailViewController.xib */; };
+		D6C905BF2B010CF100EA54EB /* TrendingMovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C905BE2B010CF100EA54EB /* TrendingMovieDetailViewModel.swift */; };
 		D6E599B22B00395200FD4845 /* SearchMovieViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E599B12B00395200FD4845 /* SearchMovieViewController+TableView.swift */; };
 		D6E599B62B00C35D00FD4845 /* SearchMovieViewController+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E599B52B00C35D00FD4845 /* SearchMovieViewController+SearchBar.swift */; };
 		D6E599B82B00C3E200FD4845 /* SearchMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E599B72B00C3E200FD4845 /* SearchMovieViewModel.swift */; };
@@ -75,6 +78,9 @@
 		D6C905B12B0103D200EA54EB /* TrendingMovieViewModel+Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingMovieViewModel+Pagination.swift"; sourceTree = "<group>"; };
 		D6C905B32B01072000EA54EB /* TrendingMovieViewController+LoadNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingMovieViewController+LoadNext.swift"; sourceTree = "<group>"; };
 		D6C905B52B01077B00EA54EB /* SearchMovieViewController+LoadNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchMovieViewController+LoadNext.swift"; sourceTree = "<group>"; };
+		D6C905BA2B010CE300EA54EB /* TrendingMovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieDetailViewController.swift; sourceTree = "<group>"; };
+		D6C905BB2B010CE300EA54EB /* TrendingMovieDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingMovieDetailViewController.xib; sourceTree = "<group>"; };
+		D6C905BE2B010CF100EA54EB /* TrendingMovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieDetailViewModel.swift; sourceTree = "<group>"; };
 		D6E599B12B00395200FD4845 /* SearchMovieViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchMovieViewController+TableView.swift"; sourceTree = "<group>"; };
 		D6E599B52B00C35D00FD4845 /* SearchMovieViewController+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchMovieViewController+SearchBar.swift"; sourceTree = "<group>"; };
 		D6E599B72B00C3E200FD4845 /* SearchMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieViewModel.swift; sourceTree = "<group>"; };
@@ -148,6 +154,7 @@
 		D69A62802AFF7605005492BC /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				D6C905B72B010CB300EA54EB /* TrendingMovieDetail */,
 				D69A62862AFF7664005492BC /* SavedMovie */,
 				D69A62852AFF764E005492BC /* TrendingMovie */,
 				D69A62842AFF7644005492BC /* SearchMovie */,
@@ -302,6 +309,32 @@
 			path = MovieTableViewCell;
 			sourceTree = "<group>";
 		};
+		D6C905B72B010CB300EA54EB /* TrendingMovieDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D6C905B92B010CC200EA54EB /* ViewModel */,
+				D6C905B82B010CBC00EA54EB /* View */,
+			);
+			path = TrendingMovieDetail;
+			sourceTree = "<group>";
+		};
+		D6C905B82B010CBC00EA54EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6C905BA2B010CE300EA54EB /* TrendingMovieDetailViewController.swift */,
+				D6C905BB2B010CE300EA54EB /* TrendingMovieDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6C905B92B010CC200EA54EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D6C905BE2B010CF100EA54EB /* TrendingMovieDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,6 +401,7 @@
 			files = (
 				D69A62772AFF75A2005492BC /* LaunchScreen.storyboard in Resources */,
 				D69A62742AFF75A2005492BC /* Assets.xcassets in Resources */,
+				D6C905BD2B010CE300EA54EB /* TrendingMovieDetailViewController.xib in Resources */,
 				D69A62B02AFF7ABE005492BC /* MovieTableViewCell.xib in Resources */,
 				D69A62952AFF7716005492BC /* TrendingMovieViewController.xib in Resources */,
 				D69A62992AFF7723005492BC /* SearchMovieViewController.xib in Resources */,
@@ -391,8 +425,10 @@
 				D69A626B2AFF75A0005492BC /* AppDelegate.swift in Sources */,
 				D6C905B22B0103D200EA54EB /* TrendingMovieViewModel+Pagination.swift in Sources */,
 				D6C905B02B01034C00EA54EB /* SearchMovieViewModel+Pagination.swift in Sources */,
+				D6C905BF2B010CF100EA54EB /* TrendingMovieDetailViewModel.swift in Sources */,
 				D69A629B2AFF774C005492BC /* DashboardViewController.swift in Sources */,
 				D69A626D2AFF75A0005492BC /* SceneDelegate.swift in Sources */,
+				D6C905BC2B010CE300EA54EB /* TrendingMovieDetailViewController.swift in Sources */,
 				D6C905AA2B00FE1500EA54EB /* SearchMovieViewModel+Search.swift in Sources */,
 				D69A62942AFF7716005492BC /* TrendingMovieViewController.swift in Sources */,
 				D69A62B52AFF7F46005492BC /* TrendingMovieViewModel.swift in Sources */,

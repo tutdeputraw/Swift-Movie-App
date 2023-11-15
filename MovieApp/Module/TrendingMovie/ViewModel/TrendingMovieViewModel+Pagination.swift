@@ -9,6 +9,11 @@ import Foundation
 
 extension TrendingMovieViewModel {
     
+    func firstLoad() {
+        appState.value = .OnLoading
+        self.getTrendingMovie(page: 1)
+    }
+    
     func refreshPage() {
         self.getTrendingMovie(page: 1)
     }

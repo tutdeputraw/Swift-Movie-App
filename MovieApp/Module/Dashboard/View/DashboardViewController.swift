@@ -24,6 +24,8 @@ class DashboardViewController: UITabBarController {
         vc2.title = "Search"
         vc3.title = "Saved"
         
+//        vc1.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: nil)
+        
         tabBar.tintColor = .label
         
         setViewControllers([vc1,vc2,vc3], animated: true)

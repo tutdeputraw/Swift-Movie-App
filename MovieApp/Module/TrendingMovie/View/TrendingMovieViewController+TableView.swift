@@ -22,6 +22,13 @@ extension TrendingMovieViewController: UITableViewDelegate, UITableViewDataSourc
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let data = viewModel.dataSource[indexPath.row]!
+        let data = viewModel.dataSource?.results[indexPath.row]
+        let destinationVC = TrendingMovieDetailViewController(data!)
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
