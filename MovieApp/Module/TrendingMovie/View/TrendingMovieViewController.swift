@@ -28,6 +28,11 @@ class TrendingMovieViewController: UIViewController {
         bindViewModel()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     func bindViewModel() {
         viewModel.appState.bind { result in
             DispatchQueue.main.async {
