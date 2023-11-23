@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DashboardViewController: UITabBarController {
+class DashboardViewControllerProgramatically: UITabBarController {
     var genreViewModel = GenreViewModel.shared
     
     override func viewDidLoad() {
@@ -17,9 +17,9 @@ class DashboardViewController: UITabBarController {
     }
     
     func setupNavigation() {
-        let vc1 = UINavigationController(rootViewController: TrendingMovieViewController())
-        let vc2 = UINavigationController(rootViewController: SearchMovieViewController())
-        let vc3 = UINavigationController(rootViewController: SavedMovieViewController())
+        let vc1 = UINavigationController(rootViewController: TrendingMovieViewControllerProgramatically())
+        let vc2 = UINavigationController(rootViewController: SearchMovieViewControllerProgramatically())
+        let vc3 = UINavigationController(rootViewController: SavedMovieViewControllerProgramatically())
         
         vc1.tabBarItem.image = UIImage(systemName: "house")
         vc2.tabBarItem.image = UIImage(systemName: "magnifyingglass")

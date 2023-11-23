@@ -34,7 +34,7 @@ class MovieTableViewCell: UITableViewCell {
         titleLabel.text = movie.title
         yearLabel.text = movie.releaseDate
         ratingLabel.text = "\(movie.voteAverage ?? 0)/10"
-        posterImageView.sd_setImage(with: URL(string: "\(Constant.IMAGE_NETWORK)\(movie.posterPath ?? "")"))
+        posterImageView.sd_setImage(with: URL(string: "\(Constant.API.IMAGE_NETWORK)\(movie.posterPath ?? "")"))
     }
     
 }

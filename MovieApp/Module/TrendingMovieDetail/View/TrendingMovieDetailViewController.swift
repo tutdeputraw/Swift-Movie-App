@@ -19,6 +19,8 @@ class TrendingMovieDetailViewController: UIViewController {
     
     var dataSource: Movie
     
+    var viewModel = TrendingMovieDetailViewModel()
+    
     init(_ dataSource: Movie) {
         self.dataSource = dataSource
         super.init(nibName: nil, bundle: nil)
@@ -36,13 +38,10 @@ class TrendingMovieDetailViewController: UIViewController {
     }
     
     func setupView() {
-        //        title = dataSource.title
-        let items = [UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: #selector(bookmark))]
-        self.toolbarItems = items
-        
-        self.toolbarItems = []
         self.tabBarController?.tabBar.isHidden = true
-        contentLayout.backgroundColor = .systemBackground
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(bookmark(_:)))
+        
         contentLayout.layer.cornerRadius = 10.0
         contentLayout.clipsToBounds = true
         contentLayout.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
@@ -50,16 +49,12 @@ class TrendingMovieDetailViewController: UIViewController {
     
     func setupDataBinding() {
         tvTitle.text = dataSource.title
-        posterImageVIew.sd_setImage(with: URL(string: "\(Constant.IMAGE_NETWORK)\(dataSource.backdropPath ?? "")"))
-        tvOverview.text = "\(dataSource.overview!)#1#\(dataSource.overview!)#2#\(dataSource.overview!)#3#\(dataSource.overview!)#4#\(dataSource.overview!)#5#\(dataSource.overview!)#6#\(dataSource.overview!)#7#\(dataSource.overview!)#8#\(dataSource.overview!)#9#\(dataSource.overview!)#10#\(dataSource.overview!)-END"
+        posterImageVIew.sd_setImage(with: URL(string: "\(Constant.API.IMAGE_NETWORK)\(dataSource.backdropPath ?? "")"))
+        tvOverview.text = "\(dataSource.overview!)"
         
     }
     
-    @IBAction func bookmarkOnClicked(_ sender: Any) {
-        
-    }
-    
-    @objc private func bookmark() {
-        
+    @objc private func bookmark(_ sender: Any) {
+//        viewModel.
     }
 }
